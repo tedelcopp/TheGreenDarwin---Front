@@ -1,0 +1,32 @@
+.discountSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.containerGreen {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    gap: 5vh;
+    padding-bottom: 25px;
+    text-align: flex-start;
+}
+
+
+.greenText h3 {
+    color: #69b347;
+}
+
+.greenImg {
+    margin-right: -30%;
+    margin-left: -10%;
+    opacity: 0.3;
+}
+
+.greenImg img {
+    height: 500px;
+}

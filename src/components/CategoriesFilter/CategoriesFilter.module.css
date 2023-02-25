@@ -1,0 +1,30 @@
+.filtercontainer {
+  margin-left: 10px;
+  display: flex;
+  width: 300px;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.filtercontainer h2 {
+  font-size: 1.1rem;
+}
+
+.filtercontainer h3 {
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #d4ffb1;
+  font-size: 1.1rem;
+}
+
+.select {
+  padding: 10px;
+  margin: 3px;
+  width: 120px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #d4ffb1;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background-color: #2a265f;
+}

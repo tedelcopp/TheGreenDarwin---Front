@@ -1,0 +1,35 @@
+.container{
+    background-color: #69b347;
+
+}
+
+
+.backButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #386641;
+    width: 160px;
+    height: 40px;
+    margin-top: 35px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #d4ffb1;
+  }
+  
+.backButton a:link {
+    color: #84db9a;
+  }
+  
+.backButton a:visited {
+    color: #84db9a;
+  }
+
+  .title {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }

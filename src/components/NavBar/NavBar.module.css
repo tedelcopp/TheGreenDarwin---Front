@@ -1,0 +1,80 @@
+.background {
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  display: flex;
+  display: inline;
+
+}
+
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 8px;
+
+}
+
+.userName {
+  display: flex;
+  gap: 15px;
+  color: #69b347;
+  margin-right: 15px;
+  padding: 10px 40px;
+  font-weight: bold;
+  font-size: large;
+  align-items: center;
+}
+
+.btn_right {
+  color: #69b347;
+  border: solid 3pt;
+  border-radius: 45px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-right: 15px;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+
+.btn_right:hover {
+  color: antiquewhite;
+  background-color: #69b347;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.btn_left {
+  color: #69b347;
+  cursor: pointer;
+  font-size: 100%;
+  overflow: hidden;
+  padding: 15px 32px;
+  font-weight: bold;
+}
+
+.btn_left:hover {
+  color: antiquewhite;
+  background-color: #69b347;
+}
+
+.NavBar svg {
+  height: 30px;
+}

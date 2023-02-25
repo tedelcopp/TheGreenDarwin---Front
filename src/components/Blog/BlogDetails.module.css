@@ -1,0 +1,89 @@
+.titleContent{
+  margin: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+.titleContent>u {
+  text-decoration: none;
+  color: #69b347;
+  font-size: 45px;
+
+}
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #386641;
+  width: 160px;
+  height: 40px;
+  margin-top: 35px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #d4ffb1;
+  cursor: pointer;
+}
+.backButton a:link {
+  color: #84db9a;
+}
+.backButton a:visited {
+  color: #84db9a;
+}
+.tittle{
+  margin-top: 2rem;
+  font-weight: bold;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  border-bottom-right-radius: 4rem;
+  border-top-right-radius: 0rem;
+  border-bottom-left-radius: 4rem;
+  border-top-left-radius: 0rem;
+      text-align: center;
+    background-image: url('../../assets/formback.jpg') ;
+    color: #ffffff;
+}
+
+.blogBody {
+  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #d4ffb1;
+    margin-top: 2%;
+    border-radius: 25px;
+    -webkit-box-shadow: 7px 10px 50px -19px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 10px 50px -19px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 10px 50px -19px rgba(0, 0, 0, 0.75);
+  }
+
+  .paragraph{
+    font-size: 22px;
+    width: 40%;
+    float: right;
+    font-weight: bold;
+    
+ 
+    /* white-space: pre-line; */
+}
+  .imagecontainer {
+    /* background: url("../../assets//greenF.png"); */
+    display: flex;
+    padding-left: 5rem;
+    justify-content: center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 40px;
+    height: 400px;
+  }
+  
+  .image {
+    width: 100px;
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.15);
+  
+  }

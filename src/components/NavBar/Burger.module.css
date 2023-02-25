@@ -1,0 +1,55 @@
+.dropdown {
+    position: relative;
+    cursor: pointer;
+    z-index: 8;
+}
+
+.menu {
+    position: absolute;
+    list-style-type: none;
+    margin: 5px;
+    margin-left: -120px;
+    padding: 0;
+    border: 1px solid grey;
+    width: 150px;
+}
+
+.menu>li {
+    margin: 0;
+    background-color: white;
+}
+
+.menu>li:hover {
+    background-color: lightgray;
+}
+
+.menu>li>button {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 5px;
+    margin: 10px;
+    font: inherit;
+    cursor: pointer;
+
+}
+
+.menu .icon {
+    height: 40px;
+}
+
+.menu a:visited {
+    color: #69b347;
+}
+
+.logout {
+    color: antiquewhite;
+    background-color: #69b347;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}

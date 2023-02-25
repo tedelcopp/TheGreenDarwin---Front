@@ -1,0 +1,8 @@
+.box {
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 0 1rem #000025 inset;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmanx(200px, 1fr));
+    gap: 1rem
+}

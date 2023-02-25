@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.home {
+    display: block;
+    align-items: center;
+}
+
+.nbar {
+    position: sticky;
+    top: 0px;
+    z-index: 1900;
+    background-color: rgb(255, 255, 255);
+}
+
+.cardsH {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    gap: 55px;
+    margin-top: 30px;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.contact {
+    background-image: url(../../assets/formback.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.formBack {
+    background-color: #69b347;
+    opacity: 0.4;
+}
+
+.discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

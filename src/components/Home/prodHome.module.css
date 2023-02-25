@@ -1,0 +1,61 @@
+.container {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+}
+
+.card {
+  margin: 10px;
+  background-color: #69b347;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  width: 300px;
+}
+
+.cardheader1 {
+  background-image: url("https://mygarden.com.co/wp-content/uploads/2017/06/product-guzmania.jpg");
+  background-size: cover;
+  height: 200px;
+}
+
+.cardheader2 {
+  background-image: url("https://mygarden.com.co/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-19-at-10.23.31-AM-1.jpeg");
+  background-size: cover;
+  height: 200px;
+}
+
+.cardbody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5px 20px;
+  min-height: 50px;
+}
+
+.cardbody h3 {
+  font-size: 20pt;
+}
+
+.button {
+  background-color: #2a265f;
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: #69b347;
+  font-size: 12pt;
+  padding: 1px 25px;
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
+  letter-spacing: 1px;
+  transition: padding 0.2s;
+}
+
+.button:hover {
+  padding: 5px 30px;
+  background-color: #151238;
+}

@@ -1,0 +1,61 @@
+.aboutUsSelection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.nav {
+    position: sticky;
+    top: 0px;
+    z-index: 8;
+    background-color: rgb(255, 255, 255);
+}
+
+.containerGreen {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    justify-content: center;
+    gap: 5vh;
+}
+
+.title1 {
+    justify-content: center;
+    color: #69b347;
+
+}
+
+.title {
+    margin: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.title>u {
+    text-decoration: none;
+    color: #69b347;
+    font-size: 45px;
+
+}
+
+.image {
+    background: url("./ImageComponentAboutUs2.jpg");
+    width: 100%;
+    height: 550px;
+    display: flex;
+    margin-top: 25px;
+    position: relative;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.greenImg {
+    margin-right: -30%;
+    margin-left: -10%;
+    opacity: 1.4;
+}
+
+.greenImg img {
+    height: 500px;
+}

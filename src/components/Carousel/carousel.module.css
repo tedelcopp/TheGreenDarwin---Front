@@ -1,0 +1,202 @@
+.containerH {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.bar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 70%;
+    top: 30%;
+}
+
+
+
+.nameInite {
+    color: #f8f8f8;
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 8.0rem;
+    position: absolute;
+    top: 10%;
+    right: 70%;
+    animation: aparecerElemento 1s;
+    transition: all 0.3s ease-out;
+    text-shadow: 2px 2px 3px black;
+}
+
+.nameInite2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #d3e5a5;
+    font-size: 7.5rem;
+    font-weight: bold;
+    line-height: 8.0rem;
+    position: absolute;
+    top: 30%;
+    right: 40%;
+    animation: aparecerElemento 1s;
+    transition: all 0.3s ease-out;
+    text-shadow: 2px 2px 3px black;
+}
+
+.name {
+    color: #d3e5a5;
+    font-size: 8.2rem;
+    font-weight: bold;
+    line-height: 9.2rem;
+    position: absolute;
+    top: 10%;
+    right: 50%;
+    animation: aparecerElemento 0.5s;
+    transition: all 0.3s ease-out;
+    text-shadow: 2px 2px 3px black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.h1 {
+    color: #f2e8cf;
+    font-size: 40pt;
+    width: 350px;
+    font-weight: bold;
+    animation: aparecerElemento 1.5s;
+}
+
+.h1_1 {
+    color: #f2e8cf;
+    font-size: 40pt;
+    width: 350px;
+    font-weight: bold;
+    animation: aparecerElemento 1.5s;
+    margin-top: -80px;
+}
+
+.h1_3 {
+    color: #f2e8cf;
+    font-size: 40pt;
+    width: 450px;
+    font-weight: bold;
+    animation: aparecerElemento 1.5s;
+    margin-top: -30px;
+    margin-left: -80px;
+}
+
+.bar_slogan {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 13%;
+    top: 60%;
+    animation: aparecerElemento 1.3s;
+    gap: 10px;
+    background-color: #579213;
+    padding: 0px 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.h1_slogan {
+    color: antiquewhite;
+    font-size: 34pt;
+    animation: aparecerElemento 1.2s;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.h1_steps {
+    color: #ff8001;
+    font-size: 44pt;
+    width: 350px;
+    font-weight: bold;
+    animation: aparecerElemento 1.2s;
+}
+
+.h2 {
+    color: #ff8001;
+    font-size: 84pt;
+    width: 350px;
+    font-weight: bold;
+    line-height: 85pt;
+    margin-top: -20px;
+    animation: aparecerElemento 1.5s;
+}
+
+header {
+    width: 100vw;
+    background: black;
+    overflow: hidden;
+}
+
+.imgCar {
+    position: relative;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.bar2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 20%;
+    row-gap: 10px;
+}
+
+.bar_life {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 70%;
+    top: 10%;
+}
+
+.hShop {
+    margin-top: 25px;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 24pt;
+    font-weight: bold;
+    background-color: #a3c413;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: rgb(1, 3, 5) 0px 20px 30px -10px;
+    transition: all .2s ease-in;
+}
+
+.barVariety {
+    color: #a3c413;
+    font-size: 84pt;
+    width: 350px;
+    font-weight: bold;
+    line-height: 55pt;
+}
+
+.hShop:hover {
+    background-color: #fffb02;
+    scale: 1.1;
+}
+
+.hShop a {
+    color: black;
+}
+
+
+@keyframes aparecerElemento {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

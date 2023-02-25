@@ -1,0 +1,71 @@
+.util {
+    display: inline;
+  }
+  
+  .pag {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #088b29;
+  }
+  
+  .notAddedContainer{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    justify-content: center;
+    gap: 5vh;
+  }
+  .notAddedMessage{
+    justify-content: center;
+    color: #69b347;
+    font-size: 35px;
+  }
+
+  .pag .prevNext {
+    width: 80px;
+    border-radius: 4px;
+    color: #8ae414;
+    background-color: #386641;
+    cursor: pointer;
+  }
+  
+  .pag button {
+    color: #0b3954;
+    background-color: #e6eabf;
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
+    padding-top: 1px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-right-width: 0px;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
+  }
+  
+  .wishlistContainer {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #b9c5a9;
+  }
+  
+  .wishlistGrid {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    grid-column-gap: 70px;
+    justify-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
