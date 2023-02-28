@@ -18,8 +18,8 @@
 
 
 .nameInite {
-    color: #f8f8f8;
-    font-size: 3.5rem;
+    color: #ffffff;
+    font-size: 2.5rem;
     font-weight: bold;
     line-height: 8.0rem;
     position: absolute;
@@ -32,7 +32,8 @@
 
 .nameInite2 {
     font-family: 'Times New Roman', Times, serif;
-    color: #d3e5a5;
+    color: #8aa48e;
+
     font-size: 7.5rem;
     font-weight: bold;
     line-height: 8.0rem;
@@ -41,22 +42,22 @@
     right: 40%;
     animation: aparecerElemento 1s;
     transition: all 0.3s ease-out;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
 }
 
 .name {
-    color: #d3e5a5;
-    font-size: 8.2rem;
+    color: #ffffff;
+    font-size: 7.3rem;
     font-weight: bold;
     line-height: 9.2rem;
     position: absolute;
-    top: 10%;
+    top: 15%;
     right: 50%;
     animation: aparecerElemento 0.5s;
     transition: all 0.3s ease-out;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 3px #5c7f61;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
+ }
 
 .h1 {
     color: #f2e8cf;
@@ -89,11 +90,11 @@
     position: absolute;
     display: flex;
     flex-direction: row;
-    left: 13%;
+    left: 55%;
     top: 60%;
     animation: aparecerElemento 1.3s;
     gap: 10px;
-    background-color: #579213;
+    background-color: #8aa48e;
     padding: 0px 20px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

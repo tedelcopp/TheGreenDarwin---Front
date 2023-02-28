@@ -1,5 +1,5 @@
-.red {
-  color: #cf3476;
+.green {
+  color: #5C7F61;
   float: left;
   font-size: 48px;
   margin-right: 10px;
@@ -16,7 +16,7 @@
 .reel {
   width: 100%;
   padding: 10px 0px;
-  background-color: #2a265f;
+  background-color: #dfe2e1;
 }
 
 .prodCard {

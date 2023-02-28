@@ -8,7 +8,7 @@
 .card {
   display: flex;
   width: 300px;
-  background-color: antiquewhite;
+  background-color: #8aa48e;
   height: 210px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 5px 20px, rgba(0, 0, 0, 0.4) 0px 6px 6px;
@@ -48,7 +48,7 @@
   display: flex;
   justify-content: flex-end;
   margin-left: 205%;
-  color: #088b29;
+  color: #ffffff;
 }
 
 .topCard .icon {
@@ -74,12 +74,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: #c7ec96;
+  color: #ffffff;
   font-weight: bold;
 }
 
 .info2:hover{
-  background-color: #2a265f;
+  background-color: #433265;
 }
 
 .info2 span {

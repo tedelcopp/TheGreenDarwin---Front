@@ -25,7 +25,7 @@ footer p {
     margin-right: auto;
     align-items: center;
     justify-content: space-evenly;
-    color: #69b347;
+    color: #5C7F61;
 }
 
 .logos svg {
@@ -34,9 +34,9 @@ footer p {
 }
 
 footer a:link {
-    color: #69b347;
+    color: #5C7F61;
 }
 
 footer a:visited {
-    color: #69b347;
+    color: #5C7F61;
 }

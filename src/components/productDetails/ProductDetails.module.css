@@ -4,7 +4,7 @@
   width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #d4ffb1;
+  background-color: #d8d8d8;
   margin-top: 2%;
   border-radius: 25px;
   -webkit-box-shadow: 7px 10px 50px -19px rgba(0, 0, 0, 0.75);
@@ -17,28 +17,39 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #386641;
+  background-color: #6a5592;
   width: 160px;
   height: 40px;
   margin-top: 35px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: #d4ffb1;
+  color: #ffffff;
   cursor: pointer;
 }
 
 .backButton a:link {
-  color: #84db9a;
+  color: #5C7F61;
 }
 
 .backButton a:visited {
-  color: #84db9a;
+  color: #5C7F61;
 }
 
 .containerP {
   display: flex;
   flex-direction: row;
   margin: 2% 10% 0 10%;
+}
+
+.containercategories {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 10% 0 10%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  background-color: #d8e0d7;
+  border-radius: 15px;
 }
 
 .containerdescription {
@@ -48,7 +59,8 @@
   border-radius: 5px;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.15);
   padding: 20px;
-  background-color: #e1facd;
+
+  background-color: #8aa48e;
   border-radius: 15px;
 }
 
@@ -59,7 +71,8 @@
   border-radius: 5px;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.35);
   padding: 20px;
-  background-color: #d8d8d8;
+  background-color: #ffffff;
+  border: solid 5pt #8aa48e;
 }
 
 .titleandwish {
@@ -95,7 +108,7 @@
 }
 
 .imagecontainer {
-  border: solid 5pt #84db9a;
+  border: solid 5pt #8aa48e;
   border-radius: 10px;
 }
 
@@ -134,13 +147,13 @@
 }
 
 .myBtn {
-  margin-top: 10px;
+  margin-top: 25px;
   margin-left: 20px;
   width: 100px;
   font-size: 18px;
   padding: 8px;
   border: none;
-  background: #2a265f;
+  background: #5c7f61;
   color: #fff;
   cursor: pointer;
   border-radius: 5px;
@@ -149,7 +162,7 @@
 
 .myBtnCalificar {
   margin-top: 10px;
-
+align-self: center;
   width: 100px;
   font-size: 18px;
   padding: 8px;
@@ -162,8 +175,10 @@
 }
 
 .myBtn:hover {
-  background: #84db9a;
-  color: black;
+  background: #6a5592;
+  color: #ffffff;
+  border-color:  #5C7F61;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.15);
 }
 
 .myBtnClose {
@@ -195,8 +210,8 @@
 }
 
 .plusBtn:hover {
-  background: #ddd;
-  color: black;
+  background: #8aa48e;
+  color: white;
 }
 
 .minusBtn {
@@ -214,8 +229,8 @@
 }
 
 .minusBtn:hover {
-  background: #ddd;
-  color: black;
+  background: #8aa48e;
+  color: white;
 }
 
 .input {
@@ -235,11 +250,14 @@
 .descriptiontitle {
   font-size: 18px;
   font-weight: bold;
+  
 }
 
 .textarea {
   border-radius: 5px;
-  border: 1px solid gray;
+  color: #000;
+  background-color: #d4d8d7;
+  border: 1px solid #9fa8a5;
 }
 
 .stars {
@@ -261,7 +279,7 @@
 }
 
 .cardContainer {
-  background-color: #84db9a;
+  background-color: #ffffff;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 25px;
@@ -279,10 +297,10 @@
   font-size: 12pt;
   font-style: italic;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: #2a265f;
+  background-color: #8aa48e;
   padding: 15px;
 }
 
 .coomentHead span {
-  color: #84db9a;
+  color: #ffffff;
 }

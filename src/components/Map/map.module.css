@@ -4,7 +4,7 @@
     padding: 10px;
     position: relative;
     padding-top: 20px;
-    background-color:#3e3e3e;
+    background-color:#C2C2C2;
     border-radius: 15px;
     width: fit-content;
     align-items: center;
@@ -22,7 +22,7 @@
     padding: 10px;
     padding-top: 10px;
     font-size: 30px;
-    color: #69b347;
+    color: #5c7f61;
     display: flex;
     vertical-align: middle;
     justify-content: center;
@@ -38,7 +38,7 @@
     padding: 10px;
    
     font-size: 30px;
-    color: #69b347;
+    color: #5c7f61;
     display: flex;
     vertical-align: middle;
     justify-content: center;

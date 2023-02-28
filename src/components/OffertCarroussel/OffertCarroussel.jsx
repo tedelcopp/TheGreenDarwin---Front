@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Autoplay } from "swiper";
-import ProductCard from './ProductCard'
+import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -12,19 +12,18 @@ import { useEffect } from "react";
 import { getProducts } from "../../redux/actions/actionIndex"; //change to ofertProducts
 
 function OffertCarroussel() {
-
   const dispatch = useDispatch();
-  const ofertProducts = useSelector((state) => state.allProducts) //change to ofertProducts
+  const ofertProducts = useSelector((state) => state.allProducts); //change to ofertProducts
 
   useEffect(() => {
-    dispatch(getProducts()) //change to ofertProducts
-  }, [])
+    dispatch(getProducts()); //change to ofertProducts
+  }, []);
 
   return (
     <div className="m-5">
       <div className={style.flexContainer}>
         <h2 className="blueOur">Check out our</h2>
-        <h2 className={style.red}>Discounts!</h2>
+        <h2 className={style.green}>Discounts!</h2>
       </div>
 
       <div className={style.reel}>
@@ -77,11 +76,12 @@ function OffertCarroussel() {
                     price={e.price}
                   />
                 </Link>
-              </SwiperSlide>);
+              </SwiperSlide>
+            );
           })}
         </Swiper>
       </div>
-    </div >
+    </div>
   );
-};
+}
 export default OffertCarroussel;

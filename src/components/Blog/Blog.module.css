@@ -11,8 +11,6 @@
     margin-top: 1rem;
     border-radius: 2rem;
     margin: 2.5px; 
-    animation-duration: 3s;
-    animation-name: slidein;
   }
   /* .blogName{
     background-color:#BBB1A5;
@@ -31,11 +29,11 @@
    }
    
   .blogSpan{
-    color: #69b347;;
+    color: #5C7F61;
     font-size: 1.5rem;
     padding: 0.3rem;
     border-radius: 1rem;
-    background-color:#2a265f;
+    background-color:#ffffff;
    }
 
   .button {
@@ -57,17 +55,4 @@
   .button:hover {
     padding: 5px 30px;
     background-color: #151238;
-  }
-
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-    
   }

@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { postFavorite, deleteFavorites } from "../../redux/actions/actionIndex";
 import { toast } from "react-toastify";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const ProductCard = (product) => {
   const { user } = useAuth0();
@@ -16,7 +17,7 @@ const ProductCard = (product) => {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
   const [cart, setCart] = useLocalStorage("cart");
-  const [hearth, setHearth] = useState(faHeart);
+  const [hearth, setHearth] = useState(FavoriteIcon);
 
   const handleFavorite = () => {
     if (user.email) {
@@ -24,7 +25,7 @@ const ProductCard = (product) => {
       if (isFav) {
         dispatch(deleteFavorites(payload));
         setIsFav(false);
-        setHearth(faHeart);
+        setHearth(FavoriteIcon);
         toast.info("Product was removed from your wishlist");
       } else {
         dispatch(postFavorite(payload));
@@ -43,8 +44,7 @@ const ProductCard = (product) => {
         <div className={s.cardImg}>
           <Link s={{ textDecoration: "none", color: "black" }} to={`/shop`}>
             <div className={s.topCard}>
-              <FontAwesomeIcon
-                icon={hearth}
+              <FavoriteIcon
                 className={s.icon}
                 onClick={() => {
                   if (!user) {

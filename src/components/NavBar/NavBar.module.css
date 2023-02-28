@@ -20,7 +20,7 @@
 .userName {
   display: flex;
   gap: 15px;
-  color: #69b347;
+  color: #5C7F61;
   margin-right: 15px;
   padding: 10px 40px;
   font-weight: bold;
@@ -29,7 +29,7 @@
 }
 
 .btn_right {
-  color: #69b347;
+  color: #5C7F61;
   border: solid 3pt;
   border-radius: 45px;
   cursor: pointer;
@@ -40,8 +40,8 @@
 }
 
 .btn_right:hover {
-  color: antiquewhite;
-  background-color: #69b347;
+  color: rgb(255, 255, 255);
+  background-color: #5C7F61;
 }
 
 .right {
@@ -62,7 +62,7 @@
 }
 
 .btn_left {
-  color: #69b347;
+  color: #5C7F61;
   cursor: pointer;
   font-size: 100%;
   overflow: hidden;
@@ -71,8 +71,8 @@
 }
 
 .btn_left:hover {
-  color: antiquewhite;
-  background-color: #69b347;
+  color: rgb(255, 255, 255);
+  background-color: #5C7F61;
 }
 
 .NavBar svg {

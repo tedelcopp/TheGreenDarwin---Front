@@ -3,7 +3,7 @@ import style from "./ProductDetails.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import Rating from "@mui/material/Rating";
-import Card from 'react-bootstrap/Card';
+import Card from "react-bootstrap/Card";
 import {
   getProduct,
   getReviewById,
@@ -17,33 +17,33 @@ import Navbar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useLocalStorage } from "./useLocalStorage";
-import { toast } from 'react-toastify'
-import Loading from '../PrivateRoutes/Loading'
+import { toast } from "react-toastify";
+import Loading from "../PrivateRoutes/Loading";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const ProductDetails = () => {
   const dispatch = useDispatch();
   const { user, isAuthenticated } = useAuth0();
   const [cart, setCart] = useLocalStorage("cart");
   const { productId } = useParams();
-  const allUsers = useSelector((state) => state.allUsers)
-  const orderedChange = useSelector((state) => state.orderedChange)
-  const reviews = useSelector((state) => state.productReview)
+  const allUsers = useSelector((state) => state.allUsers);
+  const orderedChange = useSelector((state) => state.orderedChange);
+  const reviews = useSelector((state) => state.productReview);
   const orders = useSelector((state) => state.orders);
   const product = useSelector((state) => state.productDetail);
   const [quantity, setQuantity] = useState(1);
   const [review, setReview] = useState("");
   const [rating, setRating] = useState(0);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   const getRating = (rating) => {
     setRating(rating);
   };
 
-
   const handleOwner = (id, allUsers) => {
     for (let i = 0; i < allUsers.length; i++) {
-      if (allUsers[i].id === id) return allUsers[i].fullName
+      if (allUsers[i].id === id) return allUsers[i].fullName;
     }
-  }
+  };
 
   const handleQualify = (e) => {
     const payload = {
@@ -53,15 +53,15 @@ const ProductDetails = () => {
       text: review,
     };
     if (!rating || !review) {
-      toast.warn("Please write your review before submitting!",);
+      toast.warn("Please write your review before submitting!");
       return;
     }
     dispatch(postReview(payload));
-    dispatch(getReviewById(productId))
+    dispatch(getReviewById(productId));
     toast.success("Product review was sent successfully!");
     setRating(0);
     setReview("");
-    window.location.reload(true)
+    window.location.reload(true);
   };
 
   const handleQuantity = (quantity) => {
@@ -74,18 +74,17 @@ const ProductDetails = () => {
 
   useEffect(() => {
     dispatch(getProduct(productId));
-    dispatch(getReviewById(productId))
-    dispatch(getAllUsers())
+    dispatch(getReviewById(productId));
+    dispatch(getAllUsers());
     setTimeout(() => {
-      setLoading(false)
+      setLoading(false);
     }, "1000");
   }, [dispatch, productId, review]);
-
 
   const navigate = useNavigate();
   const goBack = () => {
     navigate(-1);
-  }
+  };
 
   console.log(reviews);
 
@@ -95,8 +94,11 @@ const ProductDetails = () => {
       <div className={style.backButton} onClick={goBack}>
         <h3>Back</h3>
       </div>
-      {loading ? <div className={style.detailBody}>
-        <Loading /> </div> :
+      {loading ? (
+        <div className={style.detailBody}>
+          <Loading />{" "}
+        </div>
+      ) : (
         <div className={style.detailBody}>
           <div className={style.containerP}>
             <div className={style.imagecontainer}>
@@ -108,10 +110,12 @@ const ProductDetails = () => {
             </div>
             <div className={style.info}>
               <div className={style.titleandwish}>
-                <h2 className={style.title}>{product.name}</h2>
+                <h2 className={style.title}>
+                  <></>
+                  {product.name}
+                </h2>
 
-                <FontAwesomeIcon
-                  icon={faHeart}
+                <FavoriteIcon
                   className={style.icon}
                   onClick={() => {
                     if (isAuthenticated) {
@@ -124,7 +128,6 @@ const ProductDetails = () => {
 
                       toast.info("Product added to your wishlist!");
                     } else {
-
                       toast.warn(
                         "You must be logged in to add products to your wishlist"
                       );
@@ -192,15 +195,20 @@ const ProductDetails = () => {
                       quantity: quantity,
                     },
                   ];
-                  const verify = oldCart !== null ? oldCart.filter(e => e.id === toCart[0].id) : []
+                  const verify =
+                    oldCart !== null
+                      ? oldCart.filter((e) => e.id === toCart[0].id)
+                      : [];
                   if (oldCart === null) {
                     const toCartStringify = [...toCart];
                     //console.log(toCartStringify);
                     setCart(toCartStringify);
                   } else if (verify.length > 0) {
                     for (let i = 0; i < oldCart.length; i++) {
-                      if (oldCart[i].id === toCart[0].id) { oldCart[i].quantity++ }
-                      setCart(oldCart)
+                      if (oldCart[i].id === toCart[0].id) {
+                        oldCart[i].quantity++;
+                      }
+                      setCart(oldCart);
                     }
                   } else {
                     const toCartStringify = [...toCart].concat(oldCart);
@@ -210,11 +218,11 @@ const ProductDetails = () => {
                 }}
                 className={style.myBtn}
               >
-                Buy
+                Add to Cart
               </button>
             </div>
           </div>
-          <div className={style.containerdescription}>
+          <div className={style.containercategories}>
             <p className={style.p}>
               <span className={style.descriptiontitle}>
                 • <u>Categories:</u>
@@ -278,18 +286,21 @@ const ProductDetails = () => {
             </button>
           </div>
 
-
           {reviews?.map((e) => (
             <Card key={e.id} className={style.cardContainer}>
-              <Card.Header className={style.coomentHead}><span>{handleOwner(e.userId, allUsers)}</span> <span><Rating name="read-only" value={e.rating} readOnly /></span></Card.Header>
+              <Card.Header className={style.coomentHead}>
+                <span>{handleOwner(e.userId, allUsers)}</span>{" "}
+                <span>
+                  <Rating name="read-only" value={e.rating} readOnly />
+                </span>
+              </Card.Header>
               <Card.Body className={style.comments}>
-                <Card.Text>
-                  {e.text}
-                </Card.Text>
+                <Card.Text>{e.text}</Card.Text>
               </Card.Body>
             </Card>
           ))}
-        </div>}
+        </div>
+      )}
       <Footer />
     </>
   );

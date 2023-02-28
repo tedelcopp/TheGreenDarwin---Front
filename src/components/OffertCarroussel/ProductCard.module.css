@@ -21,7 +21,7 @@
     align-items: flex-start;
     padding: 20px;
     min-height: 130px;
-    background-color: #69b347;
+    background-color: #5c7f61;
     color: #ffffff;
     overflow: hidden;
 }
@@ -35,4 +35,9 @@
 
 .cardBody h4 {
     font-size: 14pt;
+}
+
+.title {
+    text-align: center;
+    
 }

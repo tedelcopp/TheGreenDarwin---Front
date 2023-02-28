@@ -1,12 +1,11 @@
 import React from "react";
-import { Link } from 'react-router-dom'
-import s from '../Footer/Footer.module.css'
+import { Link } from "react-router-dom";
+import s from "../Footer/Footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -28,13 +27,9 @@ export default function Footer() {
           <Link to={"https://web.whatsapp.com/"}>
             <FontAwesomeIcon icon={faWhatsapp} />
           </Link>
-
         </div>
-        <p>Copyright © 2023 Vivero Henry</p>
+        <p>Copyright © 2020 - The Green Darwin</p>
       </footer>
     </div>
-  )
+  );
 }
-
-
-

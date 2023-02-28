@@ -1,7 +1,7 @@
 .discountSection {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center; 
 }
 
 .containerGreen {
@@ -18,7 +18,7 @@
 
 
 .greenText h3 {
-    color: #69b347;
+    color: #5c7f61;
 }
 
 .greenImg {

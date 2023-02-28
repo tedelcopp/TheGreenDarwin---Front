@@ -15,28 +15,26 @@ export default function BlogDetails() {
   }, []);
   return (
     <>
-    <Navbar />
-    <div className={s.titleContent}>
-          <u>
-            Blogs
-          </u>
+      <Navbar />
+      <div className={s.titleContent}>
+        <u>Blogs</u>
       </div>
-      <Link to = '/blogs'>
-      <div className={s.backButton}>
-        <h3>Back</h3>
-      </div>
+      <Link to="/blogs">
+        <div className={s.backButton}>
+          <h3>Back</h3>
+        </div>
       </Link>
       <h1 className={s.tittle}>
         <h2>{blog.name}</h2>
       </h1>
       <div className={s.blogBody}>
-      <div className={s.imagecontainer}>
-        <img src={blog.img} alt="Img not found" />
+        <div className={s.imagecontainer}>
+          <img src={blog.img} alt="Img not found" />
+        </div>
+
+        <div className={s.paragraph}>{blog.text}</div>
       </div>
-     
-      <div className={s.paragraph}>{blog.text}</div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   );
 }
