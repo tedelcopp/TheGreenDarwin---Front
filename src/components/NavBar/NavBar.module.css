@@ -73,6 +73,7 @@
 .btn_left:hover {
   color: rgb(255, 255, 255);
   background-color: #5C7F61;
+  border-radius: 15px;
 }
 
 .NavBar svg {

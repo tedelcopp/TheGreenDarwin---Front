@@ -10,17 +10,18 @@
     margin: 5px;
     margin-left: -120px;
     padding: 0;
-    border: 1px solid grey;
+    border: 1px solid #5C7F61;
     width: 150px;
 }
 
 .menu>li {
     margin: 0;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .menu>li:hover {
-    background-color: lightgray;
+    color: white;
+    background-color: #a3b8a6;
 }
 
 .menu>li>button {
@@ -46,7 +47,7 @@
 }
 
 .logout {
-    color: antiquewhite;
+    color: rgb(247, 140, 0);
     background-color: #69b347;
     display: flex;
     align-items: center;

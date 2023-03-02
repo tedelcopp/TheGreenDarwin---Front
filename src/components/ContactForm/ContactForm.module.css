@@ -128,8 +128,12 @@ form {
     cursor: pointer;
     outline: none;
     font-weight: bold;
+    margin-top: 15px;
+
 }
 
 .formButton:hover {
+    border-radius: 20px;
     color: #ffffff;
+    background-color: #5c7f61;
 }

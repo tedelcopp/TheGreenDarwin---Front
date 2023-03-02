@@ -12,23 +12,23 @@ export default function Footer() {
     <div className={s.container}>
       <footer>
         <div className={s.logos}>
-          <Link to={"https://twitter.com/home"}>
-            <FontAwesomeIcon icon={faTwitter} />
+          <Link to={"https://twitter.com/home"} target="_blank">
+            <FontAwesomeIcon className={s.iconred} icon={faTwitter} />
           </Link>
 
-          <Link to={"https://www.facebook.com/"}>
-            <FontAwesomeIcon icon={faFacebook} />
+          <Link to={"https://www.facebook.com/"} target="_blank">
+            <FontAwesomeIcon className={s.iconred} icon={faFacebook} />
           </Link>
 
-          <Link to={"https://www.instagram.com/"}>
-            <FontAwesomeIcon icon={faInstagram} />
+          <Link to={"https://www.instagram.com/"} target="_blank">
+            <FontAwesomeIcon className={s.iconred} icon={faInstagram} />
           </Link>
 
-          <Link to={"https://web.whatsapp.com/"}>
-            <FontAwesomeIcon icon={faWhatsapp} />
+          <Link to={"https://web.whatsapp.com/"} target="_blank">
+            <FontAwesomeIcon className={s.iconred} icon={faWhatsapp} />
           </Link>
         </div>
-        <p>Copyright © 2020 - The Green Darwin</p>
+        <p>Copyright © 2020 The Green Darwin</p>
       </footer>
     </div>
   );

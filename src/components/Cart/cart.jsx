@@ -10,6 +10,8 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { React, useState, useEffect } from "react";
 import ButtonCheckout from "../ButtonCheckout/ButtonCheckout";
+import RemoveIcon from "@mui/icons-material/Remove";
+import AddIcon from "@mui/icons-material/Add";
 
 const ShopCart = () => {
   const allProducts = useSelector((state) => state.allProducts);
@@ -85,7 +87,9 @@ const ShopCart = () => {
       <div className={s.cartContainer}>
         <div className={s.cardCart}>
           <div className={s.cartHead}>
-            <h3> Shopping Cart</h3>
+            <h3>
+              <u>Shopping Cart</u>
+            </h3>
             <h4 className={s.remove} onClick={clearCart}>
               Remove all
             </h4>
@@ -99,21 +103,31 @@ const ShopCart = () => {
                 return (
                   <ul className={s.boxList}>
                     <li key={idx}>
-                      <h3>{p.name}</h3>
+                      <h3>
+                        <u>{p.name}</u>
+                      </h3>
                       <h4>
                         ${p.price}.00 x {p.quantity} = $
                         {parseInt(p.price * p.quantity)}.00
                       </h4>
-                      <button onClick={() => lessOne(p.id)}>-1</button>
+                      <RemoveIcon
+                        classname={s.addless}
+                        onClick={() => lessOne(p.id)}
+                      />
                       <button onClick={() => delFromCart(p.id)}>Remove</button>
-                      <button onClick={() => plusOne(p.id)}>+1</button>
+                      <AddIcon
+                        classname={s.addless}
+                        onClick={() => plusOne(p.id)}
+                      />
                     </li>
                   </ul>
                 );
               })
             )}
 
-            <h3>total:${total}.00 </h3>
+            <h3>
+              • <u>Total:</u> ${total}.00{" "}
+            </h3>
             <div className={s.checkoutText}>
               Proceed to Checkout
               <ButtonCheckout buyOrder={buyOrder} product={product} />

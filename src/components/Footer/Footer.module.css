@@ -16,8 +16,6 @@ footer p {
     margin-top: 25px;
 }
 
-
-
 .logos {
     display: flex;
     width: 30%;
@@ -25,8 +23,14 @@ footer p {
     margin-right: auto;
     align-items: center;
     justify-content: space-evenly;
-    color: #5C7F61;
 }
+.iconred{
+    color: #5c7f61;
+}
+.iconred:hover{
+    color: #ffffff;
+}
+
 
 .logos svg {
     height: 30px;
@@ -34,9 +38,9 @@ footer p {
 }
 
 footer a:link {
-    color: #5C7F61;
+    color: #69b347;
 }
 
 footer a:visited {
-    color: #5C7F61;
+    color: #69b347;
 }
