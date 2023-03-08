@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { deleteFavorites } from "../../redux/actions/actionIndex";
 import { toast } from "react-toastify";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 export default function WishList(product) {
   const { user } = useAuth0();
@@ -29,12 +30,13 @@ export default function WishList(product) {
   };
 
   return (
-    <>
+    <div className={s.scrollWish}>
       <div className={s.WishContainer}>
+        <h1 className={s.WishTitle}>
+          <u>Wishlist</u>
+        </h1>
+
         <div className={s.WishCard}>
-          <h3>
-            <u>Wishlist</u>
-          </h3>
           <div className={s.listCont}>
             {productsWishlist.map((e, idx) => (
               <div className={s.favList} key={idx}>
@@ -56,7 +58,9 @@ export default function WishList(product) {
                 </Link>
 
                 <div className={s.cartFav}>
-                  <span
+                  Add to cart{" "}
+                  <AddShoppingCartIcon
+                    className={s.addIconFav}
                     onClick={() => {
                       const oldCart = JSON.parse(
                         window.localStorage.getItem("cart")
@@ -83,15 +87,13 @@ export default function WishList(product) {
                       }
                       toast.info("Product added to cart!");
                     }}
-                  >
-                    Add to cart
-                  </span>
+                  />
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

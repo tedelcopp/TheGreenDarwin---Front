@@ -35,10 +35,14 @@ export default function AccountInfo() {
                 <div className={s.topInfo}>
                   <h3 className={s.accountName}> {usuario[0].username}</h3>
                   <p>
-                    • <u>Birthday:</u>{" "}
+                    •{" "}
+                    <u>
+                      <b>Birthday:</b>
+                    </u>{" "}
                     {usuario[0].birthday
                       ? reverseString(usuario[0].birthday)
                       : "No birthday registered yet."}
+                    .
                   </p>
                 </div>
                 <div>
@@ -54,14 +58,18 @@ export default function AccountInfo() {
                       </h2>
                       <hr />
                       <h4>
-                        •{" "}
-                        <u>
-                          Default Billing Address: {usuario[0].addressLineOne}
-                          {usuario[0].addressLineTwo}
-                        </u>
+                        • <u>Default Billing Address:</u>{" "}
+                        {usuario[0].addressLineOne
+                          .toLowerCase()
+                          .replace(/(^|\s)\S/g, (match) => match.toUpperCase())}
+                        , {""}
+                        {usuario[0].addressLineTwo
+                          .toLowerCase()
+                          .replace(/(^|\s)\S/g, (match) => match.toUpperCase())}
+                        .
                       </h4>
                       <h4>
-                        • <u>Phone number: {usuario[0].telephone}</u>
+                        • <u>Phone number:</u> {usuario[0].telephone}.
                       </h4>
                     </div>
                   </div>

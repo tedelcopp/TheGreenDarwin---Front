@@ -5,6 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import validateAccount from "./validateAccount";
 import { updateUser } from "../../redux/actions/actionIndex";
 import { toast } from "react-toastify";
+import TextField from "@mui/material/TextField";
 
 export default function EditAccount() {
   const { user, isAuthenticated } = useAuth0();
@@ -12,7 +13,7 @@ export default function EditAccount() {
 
   const [error, setError] = useState({});
 
-  const [input, setInput] = useState({
+  const [textField, setTextField] = useState({
     email: user.email,
     fullName: user.name,
     username: "",
@@ -24,16 +25,19 @@ export default function EditAccount() {
   });
 
   function onInputChange(e) {
-    setInput({ ...input, [e.target.name]: e.target.value });
-    setError(validateAccount({ ...input, [e.target.name]: e.target.value }));
+    setTextField({ ...textField, [e.target.name]: e.target.value });
+    setError(
+      validateAccount({ ...textField, [e.target.name]: e.target.value })
+    );
   }
 
-  const isButtonDisabled = () => !input.username || Object.keys(error).length;
+  const isButtonDisabled = () =>
+    !textField.username || Object.keys(error).length;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(updateUser(input));
-    setInput({
+    dispatch(updateUser(textField));
+    setTextField({
       email: user.email,
       fullName: user.name,
       username: "",
@@ -61,7 +65,8 @@ export default function EditAccount() {
                   <label htmlFor="">
                     • <u>Address:</u>
                   </label>
-                  <input
+                  <TextField
+                    size="small"
                     onInput={onInputChange}
                     name="addressLineOne"
                     type="text"
@@ -76,7 +81,8 @@ export default function EditAccount() {
                   <label htmlFor="">
                     • <u>City:</u>
                   </label>
-                  <input
+                  <TextField
+                    size="small"
                     onInput={onInputChange}
                     name="addressLineTwo"
                     type="text"
@@ -91,7 +97,8 @@ export default function EditAccount() {
                   <label htmlFor="">
                     • <u>Phone:</u>
                   </label>
-                  <input
+                  <TextField
+                    size="small"
                     onInput={onInputChange}
                     name="telephone"
                     type="text"
@@ -108,7 +115,8 @@ export default function EditAccount() {
                   <label htmlFor="">
                     • <u>Username:</u>
                   </label>
-                  <input
+                  <TextField
+                    size="small"
                     onInput={onInputChange}
                     name="username"
                     type="text"
@@ -123,7 +131,8 @@ export default function EditAccount() {
                   <label htmlFor="">
                     • <u>Birthday:</u>
                   </label>
-                  <input
+                  <TextField
+                    size="small"
                     onInput={onInputChange}
                     name="birthday"
                     type="text"
@@ -139,7 +148,8 @@ export default function EditAccount() {
                   <label htmlFor="">
                     • <u>Profile Pic:</u>
                   </label>
-                  <input
+                  <TextField
+                    size="small"
                     onInput={onInputChange}
                     name="picture"
                     type="url"

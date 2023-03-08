@@ -11,17 +11,17 @@
     margin-left: -120px;
     padding: 0;
     border: 1px solid #5C7F61;
-    width: 150px;
+    width: 150px; 
 }
 
 .menu>li {
     margin: 0;
-    background-color: #ffffff;
+ background-color: #ffffff; 
+
 }
 
 .menu>li:hover {
-    color: white;
-    background-color: #a3b8a6;
+    background-color: #e2ebe3;
 }
 
 .menu>li>button {
@@ -43,12 +43,12 @@
 }
 
 .menu a:visited {
-    color: #69b347;
+    color: #5c7f61;
 }
 
 .logout {
-    color: rgb(247, 140, 0);
-    background-color: #69b347;
+    color: rgb(255, 255, 255);
+    background-color: #5c7f61;
     display: flex;
     align-items: center;
     justify-content: center;

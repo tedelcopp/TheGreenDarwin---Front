@@ -24,7 +24,7 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PeopleIcon from "@mui/icons-material/People";
 import BarChartIcon from "@mui/icons-material/BarChart";
-import AddIcon from '@mui/icons-material/Add';
+import AddIcon from "@mui/icons-material/Add";
 import Chart from "./Chart";
 import Deposits from "./Deposits";
 import RecentOrders from "./RecentOrders";
@@ -33,6 +33,7 @@ import Clients from "./Clients";
 import Products from "./Products";
 import LogoutButton from "../Logout/Logout";
 import ProductForm from "../ProductForm/ProductForm";
+import s from "./dashBoardComponent.module.css";
 
 function Copyright(props) {
   return (
@@ -108,8 +109,8 @@ function DashboardContent() {
   const [ordersShow, setordersShow] = useState(false);
   const [clientsShow, setClientsShow] = useState(false);
   const [productsShow, setproductsShow] = useState(false);
-  const [productFormShow, setProductFormShow] = useState(false)
-  const [logoutShow, setLogoutShow] = useState(false)
+  const [productFormShow, setProductFormShow] = useState(false);
+  const [logoutShow, setLogoutShow] = useState(false);
 
   const toggleDrawer = () => {
     setOpen(!open);
@@ -197,7 +198,7 @@ function DashboardContent() {
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        <AppBar position="absolute" color="success" open={open}>
+        <AppBar className={s.dashTitle} position="absolute" open={open}>
           <Toolbar
             sx={{
               pr: "24px", // keep right padding when drawer closed
@@ -222,10 +223,10 @@ function DashboardContent() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Vivero Henry - Dashboard
+              The Green Darwin - Dashboard
             </Typography>
             <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
+              <Badge badgeContent={10} color="secondary">
                 <NotificationsIcon />
               </Badge>
             </IconButton>
@@ -238,8 +239,8 @@ function DashboardContent() {
               alignItems: "center",
               justifyContent: "flex-end",
               px: [1],
-            }}>
-
+            }}
+          >
             <IconButton onClick={toggleDrawer}>
               <ChevronLeftIcon />
             </IconButton>
@@ -254,7 +255,7 @@ function DashboardContent() {
                 setordersShow(false);
                 setClientsShow(false);
                 setproductsShow(false);
-                setProductFormShow(false)
+                setProductFormShow(false);
               }}
             >
               <ListItemIcon>
@@ -270,7 +271,7 @@ function DashboardContent() {
                 setordersShow(true);
                 setClientsShow(false);
                 setproductsShow(false);
-                setProductFormShow(false)
+                setProductFormShow(false);
               }}
             >
               <ListItemIcon>
@@ -286,7 +287,7 @@ function DashboardContent() {
                 setordersShow(false);
                 setClientsShow(true);
                 setproductsShow(false);
-                setProductFormShow(false)
+                setProductFormShow(false);
               }}
             >
               <ListItemIcon>
@@ -302,7 +303,7 @@ function DashboardContent() {
                 setordersShow(false);
                 setClientsShow(false);
                 setproductsShow(true);
-                setProductFormShow(false)
+                setProductFormShow(false);
               }}
             >
               <ListItemIcon>
@@ -310,25 +311,27 @@ function DashboardContent() {
               </ListItemIcon>
               <ListItemText primary="Products" />
             </ListItemButton>
-            <ListItemButton onClick={() => {
+            <ListItemButton
+              onClick={() => {
                 setGraphShow(false);
                 setdepositShow(false);
                 setrecentShow(false);
                 setordersShow(false);
                 setClientsShow(false);
                 setproductsShow(false);
-                setProductFormShow(true)
-              }}>
-            <ListItemIcon>
-              <AddIcon />
-            </ListItemIcon>
-            <ListItemText primary="Create new product" />
+                setProductFormShow(true);
+              }}
+            >
+              <ListItemIcon>
+                <AddIcon />
+              </ListItemIcon>
+              <ListItemText primary="Create new product" />
             </ListItemButton>
             <ListItemButton>
-            <ListItemIcon>
-              <LogoutButton />
-            </ListItemIcon>
-            <ListItemText primary="Logout"/>
+              <ListItemIcon>
+                <LogoutButton />
+              </ListItemIcon>
+              <ListItemText primary="Logout" />
             </ListItemButton>
 
             <Divider sx={{ my: 1 }} />

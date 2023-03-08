@@ -36,11 +36,3 @@ footer p {
     height: 30px;
     cursor: pointer;
 }
-
-footer a:link {
-    color: #69b347;
-}
-
-footer a:visited {
-    color: #69b347;
-}

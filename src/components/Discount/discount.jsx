@@ -37,7 +37,7 @@ export default function Discount() {
             |<u>Plant Security</u>
           </h3>
           <p>
-            Every plant from Vivero Henry™ comes protected by code testers
+            Every plant from The Green Darwin™ comes protected by code testers
             providing you with plants free of invasive pests & diseases. That
             means plants arrive safe & healthy at your doorstep.
           </p>

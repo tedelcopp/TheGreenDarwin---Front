@@ -19,7 +19,7 @@
     background-color: #d4d8d7;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     height: 60vh;
-    margin-top: 7.5%;
+    margin-top: 4.8%;
     border-radius: 15px;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .topInfo p {
-    color: rgb(172, 175, 172);
+    color: rgb(0, 0, 0);
 }
 
 .infoBody {
@@ -48,7 +48,8 @@
 .profilePic {
     width: 200px;
     height: 200px;
-    border-radius: 20%;
+    border: solid 5pt #6a5592;;
+    border-radius: 15px;
 }
 
 .contactInfo {
@@ -56,7 +57,7 @@
 }
 
 .contactInfo h4 {
-    color: rgb(143, 143, 143);
+    color: rgb(0, 0, 0);
 }
 
 .AInfoCard {
@@ -75,7 +76,7 @@
     background-color: #d4d8d7;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     height: 90%;
-    margin-top: 30px;
+    margin-top: 5.1%;
     border-radius: 15px;
 }
 
@@ -120,21 +121,52 @@
 
 /* ////////////////////  WISHLIST   //////////////////////// */
 
-.WishContainer {
-    width: 150%;
+
+/* .scrollDiv{
+    
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 1%;
+}  */
+
+.scrollWish{
+    width: 165%;
+    height: 60%;
     padding-left: 15%;
     padding-right: 15%;
     margin-left: 40%;
+    padding: 2%;
+    overflow-y: scroll; 
+    overflow-x: hidden;
+}
+
+
+.WishContainer {
+    /* width: 165%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-left: 40%; */
     background-color: #d4d8d7;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    height: 90%;
-    margin-top: 30%;
+    height: 60%;
+    margin-top: 8.2%;
     border-radius: 15px;
+    /* overflow: hidden;
+    overflow-y: scroll;
+    padding: 2%; */
+
+}
+.WishTitle{
+display: flex;
+justify-content: center;
+padding-top: 4%;
 }
 
 .WishCard {
     padding-top: 1px;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .WishCard h3 {
@@ -171,19 +203,25 @@
     position: absolute;
     right: -330px;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 11px;
+    
 }
 
 .cartFav:hover {
-    color: #ffffff;
-    background-color:#5C7F61;
+    color: #2f860c;
     ;
-    border-radius: 10px;
+    border-radius: 1px;
 }
 
 .cartFav:active {
     font-weight: bold;
 }
-
+.addIconFav{
+    padding-left: 11px;
+}
 .favItem {
     display: flex;
     justify-content: space-between;
@@ -204,6 +242,8 @@
 }
 
 
+
+
 /* ////////////////////  REVIEWS   //////////////////////// */
 
 .ReviewContainer {
@@ -215,7 +255,7 @@
     background-color: #d4d8d7;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     height: 80%;
-    margin-top: 8.7%;
+    margin-top: 7.9%;
     margin-bottom: 5%;
     border-radius: 15px;
 }

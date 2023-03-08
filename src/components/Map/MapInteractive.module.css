@@ -1,9 +1,10 @@
 .map_container{
-  padding-top: 1rem;
+  padding-top: 0rem;
   align-items: center;
   width: 90%;
   background: transparent;
-  border-radius: 8px;
+  border: solid 4pt #5c7f61;
+  border-radius: 10px;
 
 }
 
