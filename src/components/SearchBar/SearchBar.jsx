@@ -28,7 +28,7 @@ export default function SearchBar() {
     <div className={style.backimg}>
       <div className={style.components}>
         <h3 className={style.searchTitle}>
-          Find everything you need to bring your green spaces to life
+          Find everything you need to bring your green spaces to life!
         </h3>
         <form className={style.searchBar}>
           <input
@@ -42,7 +42,7 @@ export default function SearchBar() {
             onClick={(e) => handleInputSubmit(e)}
             className={style.submit}
             type="submit"
-            value="Explore! 🔍"
+            value="Explore 🔍"
           />
         </form>
       </div>

@@ -1,32 +1,67 @@
 .discountSection {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center; 
+    position: relative;
 }
 
 .containerGreen {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    max-width: 800px;
+    padding: 0 20px;
+    text-align: center; 
+     /* width: 500px;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     gap: 5vh;
-    padding-bottom: 25px;
-    text-align: flex-start;
+    padding-bottom: 25px; */
 }
 
+.greenText {
+  margin-bottom: 20px;
+}
 
 .greenText h3 {
     color: #5c7f61;
+    text-align: center;
+}
+.greenText p {
+    text-align: center;
 }
 
 .greenImg {
-    margin-right: -30%;
-    margin-left: -10%;
+      margin-right: -30%;
+    margin-left: -10%; 
+    opacity: 0.3; 
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+ 
+}
+/* .greenImga {
+    margin-right: 30%;
+    margin-left: 20%;
     opacity: 0.3;
+} */
+
+.greenImg img { 
+     /* height: 500px; 
+    max-height: 400px;
+    width: auto; */
+    max-height: 400px;
+  width: auto;
+  /* transform: scaleY(-1); */
+  -webkit-box-reflect: right 100px linear-gradient(transparent, white);
 }
 
-.greenImg img {
-    height: 500px;
-}
+/* .greenImgLeft {
+    left: 0;
+  }
+  
+  .greenImgRight {
+    right: 0;
+  } */

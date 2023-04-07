@@ -41,6 +41,5 @@ export default function validateAccount({
   else if (!isPhoneNumber.test(telephone))
     error.telephone = "Insert a valid phone number";
 
-  if (Object.keys(error).length) return error;
   return error;
 }

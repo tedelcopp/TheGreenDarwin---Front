@@ -28,8 +28,8 @@ export default function Carouselle() {
             <img className={s.imgCar} alt="carousel2" src={background2} />
           </header>
 
-          <div className={s.bar2}>
-            <span className={s.h1}>Explore our </span>
+          <div className={s.barExplore}>
+            <span className={s.explore}>Explore our </span>
             <span className={s.barVariety}> VARIETY </span>
             <button className={s.hShop}>
               <a href="/shop">Go To Shop</a>
@@ -53,7 +53,7 @@ export default function Carouselle() {
             <img className={s.imgCar} alt="carousel4" src={background5} />
           </header>
           <div className={s.name}>The Green Darwin</div>
-          <div className={s.bar}>
+          <div className={s.bartop}>
             <span className={s.h1_1}>Buy our selected plants in </span>
             <span className={s.h1_steps}>three simple steps!</span>
           </div>

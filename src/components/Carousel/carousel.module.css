@@ -1,3 +1,5 @@
+/* general */
+
 .containerH {
     display: flex;
     flex-direction: column;
@@ -11,20 +13,28 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    left: 70%;
-    top: 30%;
+    left: 68%;
+    top: 32%;
+}
+
+.bartop {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 65%;
+    top: 22%;
 }
 
 
-
 .nameInite {
-    color: #ffffff;
+    color: #faeee3;
     font-size: 2.5rem;
     font-weight: bold;
     line-height: 8.0rem;
     position: absolute;
     top: 10%;
-    right: 70%;
+    right: 68%;
     animation: aparecerElemento 1s;
     transition: all 0.3s ease-out;
     text-shadow: 2px 2px 3px black;
@@ -32,8 +42,8 @@
 
 .nameInite2 {
     font-family: 'Times New Roman', Times, serif;
-    color: #8aa48e;
-
+    color: #59735d;
+    -webkit-text-stroke: 1.6px #faeee3;
     font-size: 7.5rem;
     font-weight: bold;
     line-height: 8.0rem;
@@ -42,25 +52,28 @@
     right: 40%;
     animation: aparecerElemento 1s;
     transition: all 0.3s ease-out;
-    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
 .name {
-    color: #ffffff;
+    color: #59735d;
+    -webkit-text-stroke: 1.8px #faeee3;
     font-size: 7.3rem;
     font-weight: bold;
     line-height: 9.2rem;
     position: absolute;
     top: 15%;
-    right: 50%;
+    right: 45%; 
+    margin-left: 8px;
     animation: aparecerElemento 0.5s;
     transition: all 0.3s ease-out;
-    text-shadow: 2px 2px 3px #5c7f61;
+    /* text-shadow: 2px 2px 3px #5c7f61; */
     font-family: Georgia, 'Times New Roman', Times, serif;
  }
 
 .h1 {
-    color: #f2e8cf;
+    color: #faeee3;
+    -webkit-text-stroke: 2.5px #3e5141;
     font-size: 40pt;
     width: 350px;
     font-weight: bold;
@@ -68,7 +81,8 @@
 }
 
 .h1_1 {
-    color: #f2e8cf;
+    color: #faeee3;
+    -webkit-text-stroke: 2.5px #3e5141;
     font-size: 40pt;
     width: 350px;
     font-weight: bold;
@@ -77,7 +91,8 @@
 }
 
 .h1_3 {
-    color: #f2e8cf;
+    color: #faeee3;
+    -webkit-text-stroke: 2.5px #3e5141;
     font-size: 40pt;
     width: 450px;
     font-weight: bold;
@@ -94,22 +109,27 @@
     top: 60%;
     animation: aparecerElemento 1.3s;
     gap: 10px;
-    background-color: #8aa48e;
+    backdrop-filter: blur(8px);
     padding: 0px 20px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 95px 95px 95px 95px;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    -webkit-box-shadow: 1px 22px 107px 21px rgba(0,0,0,0.73);
 }
 
 .h1_slogan {
-    color: antiquewhite;
+    color: #faeee3;
+    /* -webkit-text-stroke: 1.0px #59735d; */
     font-size: 34pt;
     animation: aparecerElemento 1.2s;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
+    border-radius: 95px 95px 95px 95px;
+     margin: 4px; 
 }
 
 .h1_steps {
-    color: #ff8001;
+    color: #f56a00;
+    -webkit-text-stroke: 1.5px #faeee3;
     font-size: 44pt;
     width: 350px;
     font-weight: bold;
@@ -117,7 +137,8 @@
 }
 
 .h2 {
-    color: #ff8001;
+    color: #f56a00;
+    -webkit-text-stroke: 1.5px #faeee3;
     font-size: 84pt;
     width: 350px;
     font-weight: bold;
@@ -144,9 +165,10 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    left: 50%;
-    top: 20%;
+    left: 48%;
+    top: 28%;
     row-gap: 10px;
+    
 }
 
 .bar_life {
@@ -157,39 +179,74 @@ header {
     left: 70%;
     top: 10%;
 }
+/* ------------------------------------------Second Image of the Carousel---------------------------------------------  */
+
+.barExplore{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 45%;
+    top: 17%;
+    row-gap: 10px;
+    
+}
+
+.explore{
+    color: #faeee3;
+    -webkit-text-stroke: 2.5px #3e5141;
+    font-size: 40pt;
+    width: 350px;
+    font-weight: bold;
+    animation: aparecerElemento 1.5s;
+    position: relative; 
+    left: -320px;
+}
+
+.barVariety {
+    color: #f56a00;
+    font-size: 84pt;
+    -webkit-text-stroke: 1.3px #faeee3;
+    width: 350px;
+    font-weight: bold;
+    line-height: 55pt;
+    position: relative; 
+    left: -100px;
+}
 
 .hShop {
-    margin-top: 25px;
+     margin-top: 32px;
     width: 200px;
     height: 50px;
-    border-radius: 15px;
+    border-radius: 20px;
     font-size: 24pt;
     font-weight: bold;
-    background-color: #a3c413;
-    border: none;
+    background: #faeee3;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     cursor: pointer;
     box-shadow: rgb(1, 3, 5) 0px 20px 30px -10px;
     transition: all .2s ease-in;
+    position: relative; 
+    right: -195px;   
+
 }
 
-.barVariety {
-    color: #a3c413;
-    font-size: 84pt;
-    width: 350px;
-    font-weight: bold;
-    line-height: 55pt;
-}
-
-.hShop:hover {
-    background-color: #fffb02;
-    scale: 1.1;
+ .hShop:hover {
+    /* color: #faeee3; */
+    background-color: #59735d;
+    scale: 1.2; 
 }
 
 .hShop a {
     color: black;
-}
+    
+} 
 
+.hShop a:hover {
+    color: #faeee3;
+    
+} 
 
 @keyframes aparecerElemento {
     0% {

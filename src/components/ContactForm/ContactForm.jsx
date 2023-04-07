@@ -14,12 +14,12 @@ export default function CreateForm() {
     lastname: "",
     phone: "",
     email: "",
+    subject: "",
     message: "",
   });
 
   const handleChange = (e) => {
     setTextField({ ...textField, [e.target.name]: e.target.value });
-    // setError(validate({ ...textField, [e.target.name]: e.target.value }));
   };
 
   const isButtonDisabled = () => !(textField.name && textField.lastname);
@@ -30,7 +30,14 @@ export default function CreateForm() {
     if (typeof error === "object") return;
     console.log(error);
     await postMessage();
-    setTextField({ name: "", lastname: "", phone: "", email: "", message: "" });
+    setTextField({
+      name: "",
+      lastname: "",
+      phone: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
     toast.success("Thank you! Your message was sent successfully");
   };
 
@@ -40,6 +47,7 @@ export default function CreateForm() {
       lastname: textField.lastname.trim(),
       phone: textField.phone,
       email: textField.email,
+      subject: textField.subject.trim(),
       message: textField.message.trim(),
     };
     try {
@@ -60,9 +68,6 @@ export default function CreateForm() {
               <div className={s.appTitle}>
                 <span>CONTACT</span>
                 <span>US</span>
-              </div>
-              <div className={s.appContact}>
-                CONTACT INFO : +54 henry-vivero
               </div>
             </div>
 
@@ -111,22 +116,13 @@ export default function CreateForm() {
                       <p className={s.error}>{error?.lastname}</p>
                     )}
                   </div>
-                  {/* 
-                    <textField
-                      className={s.FormControl}
-                      placeholder="LASTNAME"
-                      value={textField.lastname}
-                      name="lastname"
-                      onChange={handleChange}
-                      type="text"
-                    /> */}
                   <div className={s.FormGroup}>
                     <TextField
                       variant="filled"
                       color="success"
                       focused
                       className={s.FormControl}
-                      label="Email"
+                      label="Email Address"
                       id="fullWidth"
                       placeholder="john.creig@gmail.com"
                       value={textField.email}
@@ -136,14 +132,6 @@ export default function CreateForm() {
                     />
                     {error?.email && <p className={s.error}>{error?.email}</p>}
                   </div>
-                  {/* <textField
-                      className={s.FormControl}
-                      placeholder="EMAIL@EXAMPLE.COM"
-                      value={textField.email}
-                      name="email"
-                      onChange={handleChange}
-                      type="text"
-                    /> */}
                   <div className={s.FormGroup}>
                     <TextField
                       variant="filled"
@@ -159,37 +147,37 @@ export default function CreateForm() {
                       type="text"
                     />
                     {error?.phone && <p className={s.error}>{error?.phone}</p>}
-
-                    {/* <textField
-                      className={s.FormControl}
-                      placeholder="PHONE NUMBER  +XX XXX XXXXX'"
-                      value={textField.phone}
-                      name="phone"
-                      onChange={handleChange}
-                      type="text"
-                    /> */}
                   </div>
+                  <TextField
+                    variant="filled"
+                    color="success"
+                    focused
+                    className={s.FormControl}
+                    label="SUBJECT"
+                    id="fullWidthf"
+                    placeholder="Plants"
+                    value={textField.subject}
+                    name="subject"
+                    onChange={handleChange}
+                    type="text"
+                  />
+                  {error?.subject && (
+                    <p className={s.error}>{error?.subject}</p>
+                  )}
                   <div className={s.FogitrmGroupMessage}>
                     <TextField
                       className={s.FormControl}
                       variant="filled"
                       color="success"
                       focused
-                      label="Write your message here..."
+                      label="Message"
                       id="fullWidth"
-                      placeholder=""
+                      placeholder="Write your message here..."
                       value={textField.message}
                       name="message"
                       multiline
                       onChange={handleChange}
                     />
-                    {/* <textarea
-                      className={s.FormControl}
-                      placeholder="Write your message here..."
-                      value={textField.message}
-                      name="message"
-                      onChange={handleChange}
-                    /> */}
                   </div>
                   <div className={s.FormGroupButtons}>
                     <button

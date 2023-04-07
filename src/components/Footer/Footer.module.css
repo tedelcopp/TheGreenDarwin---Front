@@ -1,7 +1,7 @@
 .container {
     text-align: center;
     height: 100px;
-    height: 130px;
+    height: 160px;
     overflow: hidden;
 }
 
@@ -24,15 +24,58 @@ footer p {
     align-items: center;
     justify-content: space-evenly;
 }
+
 .iconred{
     color: #5c7f61;
+    
 }
-.iconred:hover{
+
+ .iconred:hover{
     color: #ffffff;
+    animation: slide-top 0.5s linear both;
+    
+}
+
+
+@keyframes slide-top{0%{transform:translateY(0)}100%{transform:translateY(-13px)}} 
+
+/* .iconred:hover,
+.iconred:focus,
+.iconred:active{
+    animation-name: slide-btn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+} */
+
+
+/* .iconred:hover{
+    color: #ffffff;
+    animation: slide-top 0.3s linear both;
+} */
+@keyframes slide-top{
+  
+    /* 16%{transform: translateY(8px)}; */
+    35%{transform: translateY(-9px)};
+    50%{transform: translateY(4px)};
+    65%{transform: translateY(-2px)};
+    85%{transform: translateY(-1px)};
+    100%{transform: translateY(0)};
 }
 
 
 .logos svg {
     height: 30px;
     cursor: pointer;
+}
+.followus{
+    margin-top: -3px;
+    display: flex;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #faeee3;
+    font-family: "Trebuchet MS", "sans-serif";
+    font-size: 28px;
 }

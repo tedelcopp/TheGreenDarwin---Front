@@ -1,4 +1,11 @@
-export default function validate({ name, lastname, phone, email, message }) {
+export default function validate({
+  name,
+  lastname,
+  phone,
+  email,
+  subject,
+  message,
+}) {
   const isBlankSpace = new RegExp("^\\s+$");
   const isPhoneNumber =
     /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}/;
@@ -29,6 +36,9 @@ export default function validate({ name, lastname, phone, email, message }) {
     error.email = "Insert your email address";
   else if (!isEmailAddress.test(email))
     error.email = "Insert a valid email address";
+
+  if (!subject || isBlankSpace.test(subject))
+    error.subject = "Write your subject";
 
   if (!message || isBlankSpace.test(message))
     error.message = "Write your message";

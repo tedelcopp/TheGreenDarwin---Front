@@ -37,11 +37,11 @@
    }
 
   .button {
-    background-color: #2a265f;
+    background-color: #6a5592;
     justify-content: center;
     border-radius: 50px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-    color: #69b347;
+    color: #ffffff;
     font-size: 12pt;
     padding: 1px 25px;
     position: relative;
@@ -50,9 +50,10 @@
     right: 50%;
     letter-spacing: 2px;
     width: 100%;
+    
   }
   
   .button:hover {
     padding: 5px 30px;
-    background-color: #151238;
+    background-color: #5C7F61;
   }

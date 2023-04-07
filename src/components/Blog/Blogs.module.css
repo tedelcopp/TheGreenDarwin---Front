@@ -20,19 +20,16 @@
     margin: 30px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    text-align: center;
-    background-color: #5c7f61;
- 
 }
 .titleContent>u {
     text-decoration: none;
-    color: #ffffff;
+    color: #5C7F61;
     font-size: 45px;
 }
 .blog{
     width: 100%;
     padding: 10px 0px;
-    background-color: #2a265f;
+    background-color: #6a5592;
 }
 .BlogText{
     justify-content: center;
@@ -73,8 +70,8 @@
     height: 8%;
     align-self: center;
     margin: 1em;
-    color: green;
-    background-color: #2a265f;
+    color: rgb(255, 255, 255);
+    background-color: #6a5592;
     border: 0;
     border-radius: 50px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
@@ -83,7 +80,7 @@
  
 }
 .blogButton:hover{
-    background-color: rgb(255, 196, 0);
+    background-color: #5C7F61;
     padding: 5px 30px;
     cursor: pointer;
 }

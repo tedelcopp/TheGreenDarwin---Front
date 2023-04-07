@@ -5,13 +5,20 @@ import greenPlant from "../../assets/greenF.png";
 export default function Discount() {
   return (
     <div className={s.discountSection}>
-      <div className={s.greenImg}>
+      {/* <div className={s.greenImg}>
+        <div className={s.greenImgRight}>
+          <img src={greenPlant}></img>
+        </div>
+        <div className={s.greenImgLeft}>
+          <img src={greenPlant}></img>
+        </div>
         <img src={greenPlant}></img>
-      </div>
+      </div> */}
+
       <div className={s.containerGreen}>
         <div className={s.greenText}>
           <h3>
-            | <u>The Importance of Renewal Pruning</u>
+            | <u>The Importance of Renewal Pruning</u> |
           </h3>
           <p>
             The key to a successful renewal is to cut out the oldest stems about
@@ -34,7 +41,7 @@ export default function Discount() {
 
         <div className={s.greenText}>
           <h3>
-            |<u>Plant Security</u>
+            | <u>Plant Security</u> |
           </h3>
           <p>
             Every plant from The Green Darwin™ comes protected by code testers
