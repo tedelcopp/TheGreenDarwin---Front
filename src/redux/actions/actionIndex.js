@@ -29,16 +29,15 @@ export const FILTER_BY_RATING = "FILTER_BY_RATING";
 export const EDIT_PRODUCT = "EDIT_PRODUCT";
 export const PUT_PRODUCT_STATE = "PUT_PRODUCT_STATE";
 
-
 export const getState = () => {
-  return function(dispatch) {
-    dispatch({ type: GET_PRODUCTS});
-  }
-}
+  return function (dispatch) {
+    dispatch({ type: GET_PRODUCTS });
+  };
+};
 
 export const getProducts = () => {
   return async function (dispatch) {
-    const productsResponse = await axios.get("/products");
+    const productsResponse = await axios.get("http://localhost:3000/products");
     dispatch({ type: GET_PRODUCTS, payload: productsResponse.data });
   };
 };
@@ -80,17 +79,15 @@ export const createProduct = (product) => {
         },
       });
 
-      if (response.status === 201){
-
+      if (response.status === 201) {
         dispatch({
           type: CREATE_PRODUCT,
           payload: response,
         });
 
-        toast.success('Product created successfully')
-      } else if (response.status === 400){
-        console.error('Error creating new product')
-
+        toast.success("Product created successfully");
+      } else if (response.status === 400) {
+        console.error("Error creating new product");
       }
     } catch (error) {
       console.error(error);
@@ -99,7 +96,6 @@ export const createProduct = (product) => {
     }
   };
 };
-
 
 export const createCategory = (category) => {
   return async function (dispatch) {
@@ -362,7 +358,7 @@ export const putProductState = ({ name, activeProduct }) => {
 
       dispatch({
         type: PUT_PRODUCT_STATE,
-        payload: activeProduct
+        payload: activeProduct,
       });
     } catch (error) {
       console.log(error);
@@ -370,15 +366,14 @@ export const putProductState = ({ name, activeProduct }) => {
   };
 };
 
-
-  export const editProduct = (product) => {
-    return async function(dispatch) {
-      try {
-        const response = axios.put("/products", product);
-        dispatch({ type: CREATE_PRODUCT, payload: response });
-      } catch (error) {
-        console.log(error)
-        toast.error("Could not edit product");
-      }
+export const editProduct = (product) => {
+  return async function (dispatch) {
+    try {
+      const response = axios.put("/products", product);
+      dispatch({ type: CREATE_PRODUCT, payload: response });
+    } catch (error) {
+      console.log(error);
+      toast.error("Could not edit product");
     }
-  }
+  };
+};

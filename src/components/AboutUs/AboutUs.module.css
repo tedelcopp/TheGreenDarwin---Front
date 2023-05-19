@@ -1,8 +1,19 @@
+.imgaboutus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
 .aboutUsSelection {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 20px;
+     flex-direction: row; 
+     align-items: center;
+    margin: auto; 
+    width: 900px;
+    height: 520px;
+    text-align: center;
 }
 
 .nav {
@@ -13,30 +24,46 @@
 }
 
 .containerGreen {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     width: 600px;
     justify-content: center;
     gap: 5vh;
-}
-
-.title1 {
-    justify-content: center;
-    color: #5C7F61;
-
+    text-align: center; */
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    padding: 0 20px;
+    text-align: center; 
+    margin-top: -12%;
+    
 }
 
 .title {
-    margin: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
+    display: center;
+    margin: 100px;
+    margin-top: 15px;
+    text-decoration: underline;
+    text-decoration-color: #5C7F61;
+    text-decoration-thickness: 5px;
+    text-align: center;
+
 }
 
 .title>u {
     text-decoration: none;
     color: #5C7F61;
     font-size: 45px;
+}
 
+.title1 {
+    margin:auto;
+    text-align: center;
+}
+.title1 p {
+    margin: 0.6em auto; 
+    text-align: center;
+    font-weight: normal;
 }
 
 .image {
@@ -48,14 +75,29 @@
     position: relative;
     object-fit: cover;
     background-size: cover;
+    border: solid 5pt #8aa48e;
+    border-radius: 10px;
 }
 
 .greenImg {
     margin-right: -30%;
     margin-left: -10%;
     opacity: 1.4;
-}
+} 
 
-.greenImg img {
-    height: 500px;
+.contactUs{
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 120px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: #6a5592;
 }

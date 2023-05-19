@@ -1,9 +1,14 @@
 import React from "react";
-import { useAuth0 } from '@auth0/auth0-react'
-import LogoutIcon from '@mui/icons-material/Logout';
+import { useAuth0 } from "@auth0/auth0-react";
+import LogoutIcon from "@mui/icons-material/Logout";
 
-export default function LogoutButton({className}) {
-    const { logout } = useAuth0() 
+export default function LogoutButton({ className }) {
+  const { logout } = useAuth0();
 
-    return <LogoutIcon className={className} onClick={() => logout({returnTo: window.location.origin})}/>
+  return (
+    <LogoutIcon
+      className={className}
+      onClick={() => logout({ returnTo: "http://localhost:3000/" })}
+    />
+  );
 }

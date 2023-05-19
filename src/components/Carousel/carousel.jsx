@@ -6,13 +6,13 @@ import background3 from "../../assets/search3.jpg";
 import background4 from "../../assets/search4.jpg";
 import background5 from "../../assets/search6.jpg";
 import background6 from "../../assets/search7.jpg";
-
+import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 
 export default function Carouselle() {
   return (
     <div className={s.containerH}>
-      <Carousel showThumbs={false} autoPlay interval={5000} infiniteLoop>
+      <Carousel>
         <div>
           <header>
             <img className={s.imgCar} alt="carousel1" src={background1} />
@@ -20,7 +20,12 @@ export default function Carouselle() {
           <div className={s.nameInite}>Welcome to </div>
           <div className={s.nameInite2}>The Green Darwin!</div>
           <div className={s.bar_slogan}>
-            <span className={s.h1_slogan}>"Leave it in our hands"</span>
+            <span className={s.h1_slogan}>Leave it in our hands</span>
+            <Link to="/about-us">
+              <button className={s.hAbouts}>
+                <a className={s.uS}>Our Team</a>
+              </button>
+            </Link>
           </div>
         </div>
         <div>
@@ -31,9 +36,11 @@ export default function Carouselle() {
           <div className={s.barExplore}>
             <span className={s.explore}>Explore our </span>
             <span className={s.barVariety}> VARIETY </span>
-            <button className={s.hShop}>
-              <a href="/shop">Go To Shop</a>
-            </button>
+            <Link to="/shop">
+              <button className={s.hShop}>
+                <a>Go To Shop</a>
+              </button>
+            </Link>
           </div>
         </div>
         <div>

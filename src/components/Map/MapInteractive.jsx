@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import L from "leaflet";
-import logo from "./img/logo.png";
+import nursery from "./img/nursery.png";
 
 const MapInteractive = ({ positionDetail }) => {
   const MarkerIcon = L.icon({
@@ -35,8 +35,10 @@ const MapInteractive = ({ positionDetail }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <h3 className={s.title}>The Green Darwin</h3>
-                <img className={s.pictureHome} src={logo} alt="" />
+                <h3 className={s.title}>
+                  <b>The Green Darwin</b>
+                </h3>
+                <img className={s.pictureHome} src={nursery} alt="" />
               </a>
             </div>
           </Popup>

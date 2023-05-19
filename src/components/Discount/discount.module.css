@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center; 
     position: relative;
+    
 }
 
 .containerGreen {
@@ -22,6 +23,7 @@
 
 .greenText {
   margin-bottom: 20px;
+  font-size: larger;
 }
 
 .greenText h3 {

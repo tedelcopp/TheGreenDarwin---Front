@@ -13,7 +13,10 @@ const AdminGuard = ({ component }) => {
     return <Loading />;
   }
 
-  if (user && user['https://pf-henry-front-one.vercel.app/roles'].includes('Admin')) {
+  if (
+    user &&
+    user["https://pf-henry-front-one.vercel.app/roles"].includes("Admin")
+  ) {
     return <Component />;
   }
 

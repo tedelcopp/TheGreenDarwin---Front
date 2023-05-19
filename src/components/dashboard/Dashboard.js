@@ -45,7 +45,7 @@ function Copyright(props) {
     >
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
-        Vivero Henry
+        The Green Darwin
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}

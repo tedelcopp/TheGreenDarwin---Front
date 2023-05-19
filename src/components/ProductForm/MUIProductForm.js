@@ -1,12 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import validate from './validate';
-import { getCategories, createProduct } from '../../redux/actions/actionIndex.js';
-import { toast } from 'react-toastify';
-import s from './ProductForm.module.css';
-import { TextField, Button, Select, MenuItem, InputLabel, FormControl, List, ListItem, ListItemText, IconButton, Typography } from '@mui/material';
-import DeleteIcon from '@material-ui/icons/Delete';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import validate from "./validate";
+import {
+  getCategories,
+  createProduct,
+} from "../../redux/actions/actionIndex.js";
+import { toast } from "react-toastify";
+import s from "./ProductForm.module.css";
+import {
+  TextField,
+  Button,
+  Select,
+  MenuItem,
+  InputLabel,
+  FormControl,
+  List,
+  ListItem,
+  ListItemText,
+  IconButton,
+  Typography,
+} from "@mui/material";
+import DeleteIcon from "@material-ui/icons/Delete";
 
 // const useStyles = makeStyles({
 //   prodForm: {
@@ -37,7 +52,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 //   },
 // });
 
-export default function ProductForm () {
+export default function ProductForm() {
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.allCategories);
   const navigate = useNavigate();
@@ -51,7 +66,7 @@ export default function ProductForm () {
     img: "",
     offert: "",
     stock: "",
-    categories: []
+    categories: [],
   });
 
   useEffect(() => {
@@ -59,36 +74,37 @@ export default function ProductForm () {
   }, [dispatch]);
 
   function handleChange(e) {
-    setInput(prevState => {
-      const newState = {    
+    setInput((prevState) => {
+      const newState = {
         ...prevState,
         [e.target.name]: e.target.value,
       };
-      setErr(validate(newState));    
-      return newState;                 
+      setErr(validate(newState));
+      return newState;
     });
   }
 
-  const isButtonDisabled = () => (Object.keys(err).length > 0);
+  const isButtonDisabled = () => Object.keys(err).length > 0;
 
   const handleSelectCategory = (e) => {
     const selCategory = e.target.value;
     setInput((prevInput) => ({
       ...prevInput,
-      categories: [...prevInput.categories, selCategory]
+      categories: [...prevInput.categories, selCategory],
     }));
   };
 
   const handleDeleteCategory = (cat) => {
     setInput({
       ...input,
-      categories: input.categories.filter((c) => c !== cat)
+      categories: input.categories.filter((c) => c !== cat),
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (Object.keys(err).length) toast.warn('Please complete the form with the correct data');
+    if (Object.keys(err).length)
+      toast.warn("Please complete the form with the correct data");
     const newProduct = {
       name: input.name,
       description: input.description,
@@ -98,7 +114,7 @@ export default function ProductForm () {
       offert: Number(input.offert),
       stock: Number(input.stock),
       img: input.img,
-      category: [...input.categories]
+      category: [...input.categories],
     };
     dispatch(createProduct(newProduct));
     setInput({
@@ -110,13 +126,13 @@ export default function ProductForm () {
       img: "",
       offert: "",
       stock: "",
-      categories: []
+      categories: [],
     });
-    navigate('/admin');
-  }; 
+    navigate("/admin");
+  };
 
-return (
-  <div className={s.prodForm}>
+  return (
+    <div className={s.prodForm}>
       <Typography variant="h1">Create a new product</Typography>
       <Typography variant="h5">Complete all fields</Typography>
 
@@ -222,7 +238,9 @@ return (
             type="text"
             placeholder="Description"
           />
-          {err.description && <Typography color="error">{err.description}</Typography>}
+          {err.description && (
+            <Typography color="error">{err.description}</Typography>
+          )}
         </FormControl>
 
         <FormControl fullWidth>

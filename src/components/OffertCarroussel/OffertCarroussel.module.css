@@ -1,16 +1,22 @@
 .green {
   color: #6a5592;
   float: left;
-  font-size: 48px;
-  margin-right: 10px;
+  font-size: 60px;
+  margin-right: 45px;
   font-weight: 700;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
+  display: flex;
+    
 }
-
+.green h2{
+  font-size: small;
+}
 .flexContainer {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: larger;
 }
 
 .reel {

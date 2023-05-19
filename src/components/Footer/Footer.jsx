@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <div className={s.container}>
       <footer>
-        <h1 className={s.followus}>FOLLOW US</h1>
+        <h1 className={s.followus}>Connect with us</h1>
         <div className={s.logos}>
           <Link to={"https://twitter.com/home"} target="_blank">
             <FontAwesomeIcon className={s.iconred} icon={faTwitter} />
@@ -29,7 +29,7 @@ export default function Footer() {
             <FontAwesomeIcon className={s.iconred} icon={faWhatsapp} />
           </Link>
         </div>
-        <p> The Green Darwin | Copyright © 2023</p>
+        <p className={s.copyright}> The Green Darwin | Copyright © 2023</p>
       </footer>
     </div>
   );
