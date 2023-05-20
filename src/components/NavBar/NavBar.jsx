@@ -1,5 +1,6 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import React from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
@@ -21,20 +22,47 @@ export default function NavBar() {
     user["https://pf-henry-front-one.vercel.app/roles"].includes("Admin");
   // user && console.log(user)
 
-  let navigate = useNavigate();
-
-  const handleClickMarket = () => {
-    window.location.reload();
-  };
-
   const handleClickHome = (e) => {
-    if (window.location.pathname === "/") {
+    if (window.location.pathname === "/" && !e.isDefaultPrevented()) {
       e.preventDefault();
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
     }
+  };
+
+  // const handleClickContact = (e, scrollPosition) => {
+  //   e.preventDefault();
+  //   window.scrollTo({
+  //     top: scrollPosition,
+  //     behavior: "smooth",
+  //   });
+  // };
+
+  // const navigate = useNavigate(); 2do codigo, este funciona tambien
+
+  // const handleClickContact = (e, scrollPosition) => {
+  //   e.preventDefault();
+
+  //   // Verificar si la ruta actual es "/"
+  //   if (window.location.pathname === "/") {
+  //     // Scroll hacia la posición deseada
+  //     window.scrollTo({
+  //       top: scrollPosition,
+  //       behavior: "smooth",
+  //     });
+  //   } else {
+  //     // Redirigir al componente "Home" de la sección "Contact Us"
+  //     navigate("/", { scrollPosition });
+  //   }
+  // };
+
+  const navigate = useNavigate();
+
+  const handleClickContact = (e, scrollPosition) => {
+    e.preventDefault();
+    navigate("/contact-us", { state: { scrollPosition } });
   };
 
   return (
@@ -59,7 +87,13 @@ export default function NavBar() {
             <Link to="/blogs" className={style.btn_left}>
               Blogs
             </Link>
-            <Link to="/" className={style.btn_left}>
+            <Link
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/", { state: { scrollPosition: 1737 } });
+              }}
+              className={style.btn_left}
+            >
               Contact Us
             </Link>
           </div>

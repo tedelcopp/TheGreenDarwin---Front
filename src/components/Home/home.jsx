@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import Navbar from "../NavBar/NavBar";
 import Carousel from "../Carousel/carousel";
 import ProdHome from "./prodHome";
@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 import Contact from "../ContactForm/ContactForm";
 import ShopHome from "../Home/shopHome";
 import Discount from "../Discount/discount";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Map from "../Map/map";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useDispatch } from "react-redux";
@@ -37,6 +37,26 @@ export default function Home() {
     }
   }, [isAuthenticated, dispatch, getAccessTokenSilently, user]);
 
+  const bottomRef = useRef(null);
+
+  useEffect(() => {
+    if (bottomRef.current) {
+      bottomRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
+  const location = useLocation();
+  const scrollPosition = location.state?.scrollPosition || 0;
+
+  useEffect(() => {
+    if (scrollPosition >= 1737) {
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: "smooth",
+      });
+    }
+  }, [scrollPosition]);
+
   return (
     <>
       {isAuthenticated ? (
@@ -56,7 +76,6 @@ export default function Home() {
             </div>
             <div className={s.contact}>
               <Map />
-
               <Contact />
             </div>
             <div>

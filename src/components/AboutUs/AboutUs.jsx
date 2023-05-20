@@ -82,7 +82,7 @@ export default function AboutUs() {
       </div>
       <div>
         {" "}
-        <Link to="/#form">
+        <Link>
           <button className={s.contactUs}>Contact Us</button>
         </Link>
       </div>

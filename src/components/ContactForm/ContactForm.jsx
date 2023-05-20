@@ -74,7 +74,6 @@ export default function CreateForm() {
             <form onSubmit={handleSubmit}>
               <div className={s.screenBodyItem}>
                 <div className={s.appForm}>
-                  <section id="contact-us"></section>
                   <div className={s.FormGroup}>
                     <TextField
                       variant="filled"
